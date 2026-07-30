@@ -1,1 +1,144 @@
-# APC_Calculator
+# APC Calculator Using Doubly Linked List
+
+# 1. Introduction
+
+APC (Arbitrary Precision Calculator) is used to perform arithmetic
+operations on very large numbers using a Doubly Linked List.
+
+Each digit is stored in a separate node.
+
+Example:
+12345
+
+Stored as:
+1 <-> 2 <-> 3 <-> 4 <-> 5
+
+
+# 2. Features
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Supports very large numbers
+- Uses Doubly Linked List
+- Command line arguments
+
+
+# 3. Structure Used
+
+typedef struct node
+{
+    int data;
+    struct node *prev;
+    struct node *next;
+} Dlist;
+
+# 4. Project Files
+
+apc.h
+main.c
+addition.c
+subtraction.c
+multiplication.c
+division.c
+Makefile
+
+# 5. Working
+
+Step 1:
+Read input from command line.
+
+Example:
+./a.out 123 + 456
+
+Step 2:
+Validate inputs.
+
+Step 3:
+Convert digits into Doubly Linked List.
+
+Step 4:
+Perform arithmetic operation.
+
+Step 5:
+Store result in another linked list.
+
+Step 6:
+Print final result
+
+6. Addition Logic
+
+Example:
+  999
++ 111
+------
+ 1110
+
+Process:
+9 + 1 = 10
+Store 0 Carry 1
+
+9 + 1 + 1 = 11
+Store 1 Carry 1
+
+
+# 7. Subtraction Logic
+
+Example:
+1000 - 1 = 999
+
+Borrow operation is used.
+
+
+# 8. Multiplication Logic
+
+Example:
+123 * 2 = 246
+
+
+
+# 9. Division Logic
+
+Example:
+100 / 5 = 20
+
+Division by zero is validated.
+
+
+# 10. Validation
+
+The program checks:
+- Invalid operators
+- Invalid numbers
+- Missing arguments
+- Division by zero
+
+
+
+# 11. Compilation
+
+Compile:
+gcc *.c
+
+Run:
+./a.out 123 + 456
+
+For multiplication:
+./a.out 20 '*' 30
+
+
+
+# 12. Sample Outputs
+
+Input : 123 + 456
+Output: 579
+
+Input : 1000 - 1
+Output: 999
+
+Input : 20 * 30
+Output: 600
+
+
+
+
